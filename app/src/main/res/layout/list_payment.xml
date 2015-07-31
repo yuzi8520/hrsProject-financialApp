@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight">
+    <ImageView
+        android:id="@+id/payment_q_type_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_payment_type"
+        android:padding="2dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:adjustViewBounds="true" />
+
+
+    <TextView
+        android:id="@+id/payment_q_money_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="23dp"
+        android:text="3500.00￥"
+        android:layout_above="@+id/payment_q_title_tv"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        />
+
+    <TextView
+        android:id="@+id/payment_q_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="15-07-16"
+        android:textSize="23dp"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/payment_q_type_iv"
+       />
+
+     <TextView
+         android:id="@+id/payment_q_title_tv"
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:layout_alignBottom="@id/payment_q_type_iv"
+         android:singleLine="true"
+         android:ellipsize="marquee"
+         android:text="实打实撒旦啊圣诞节阿斯利康大家阿斯兰觉得拉手加拉时间到了卡上的阿斯科利大陆上空觉得拉手 阿斯兰空间的拉丝机"
+         android:layout_toRightOf="@+id/payment_q_type_iv"
+         />
+
+</RelativeLayout>

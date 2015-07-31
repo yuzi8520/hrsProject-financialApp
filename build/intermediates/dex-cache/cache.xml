@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="E:\developTools\androidTools\Sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="F:\androidStudioProjects\hrsFinancialApp\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-255b2d1f72a70e80df0bd06b3770dfb91951d830.jar" />
+    </item>
+    <item
+        jar="F:\androidStudioProjects\hrsFinancialApp\app\libs\commons-lang-2.6.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="0ce1edb914c94ebc388f086c6827e8bdeec71ac2">
+        <dex dex="F:\androidStudioProjects\hrsFinancialApp\app\build\intermediates\pre-dexed\debug\commons-lang-2.6-31c0e377b49e69a574c44b5a01d029398b48c68b.jar" />
+    </item>
+    <item
+        jar="F:\androidStudioProjects\hrsFinancialApp\app\libs\jackson-core-asl-1.9.13.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="3c304d70f42f832e0a86d45bd437f692129299a4">
+        <dex dex="F:\androidStudioProjects\hrsFinancialApp\app\build\intermediates\pre-dexed\debug\jackson-core-asl-1.9.13-840cb08afb8b8246d7aff6ca2a3d981ce946619a.jar" />
+    </item>
+    <item
+        jar="F:\androidStudioProjects\hrsFinancialApp\app\libs\jackson-mapper-asl-1.9.13.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="1ee2f2bed0e5dd29d1cb155a166e6f8d50bbddb7">
+        <dex dex="F:\androidStudioProjects\hrsFinancialApp\app\build\intermediates\pre-dexed\debug\jackson-mapper-asl-1.9.13-6623c75919e7e4fce2194bdfa99c67cc807b1ff6.jar" />
+    </item>
+
+</items>

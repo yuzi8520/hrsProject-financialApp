@@ -21,6 +21,8 @@ public class QueryResult  extends ResultBean {
     private int pageSize;
 
 
+
+
     private List<PaymentBean> paymentList;
 
     public int getCount() {

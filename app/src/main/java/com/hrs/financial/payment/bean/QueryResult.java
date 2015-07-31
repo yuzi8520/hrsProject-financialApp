@@ -39,6 +39,7 @@ public class QueryResult  extends ResultBean {
         this.curPage = curPage;
     }
 
+
     public int getPageSize() {
         return pageSize;
     }

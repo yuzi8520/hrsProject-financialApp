@@ -2,6 +2,7 @@ package com.hrs.financial.payment;
 
 import android.os.Handler;
 import android.os.Message;
+import android.widget.ListAdapter;
 import android.widget.Toast;
 
 import com.hrs.financial.payment.bean.QueryResult;
@@ -25,7 +26,15 @@ public class DetailHandler extends Handler {
             Toast.makeText(activity.getApplicationContext(),result.getMsg(),Toast.LENGTH_SHORT).show();
             return;
         }
-        activity.listView.setAdapter(new BillListAdapter(activity,result.getPaymentList()));
+        ListAdapter listAdapter =  activity.listView.getAdapter();
+        if(listAdapter == null || ! (listAdapter instanceof BillListAdapter)) {
+            activity.listView.setAdapter(new BillListAdapter(activity, result.getPaymentList()));
+        }else{
+            BillListAdapter billListAdapter = (BillListAdapter)listAdapter;
+            billListAdapter.setItemList(result.getPaymentList());
+            billListAdapter.notifyDataSetChanged();
+        }
+            activity.afterLoadListSuccess( result );
     }
 
 }

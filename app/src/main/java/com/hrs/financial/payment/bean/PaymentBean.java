@@ -16,7 +16,7 @@ public class PaymentBean {
 
     private Double  pay_money;
 
-    private String comment;
+    private String pay_comment;
 
     private Integer type;
 
@@ -62,12 +62,12 @@ public class PaymentBean {
         this.pay_money = pay_money;
     }
 
-    public String getComment() {
-        return comment;
+    public String getPay_comment() {
+        return pay_comment;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setPay_comment(String pay_comment) {
+        this.pay_comment = pay_comment;
     }
 
     public Integer getType() {

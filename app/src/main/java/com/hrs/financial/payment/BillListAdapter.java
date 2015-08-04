@@ -34,6 +34,13 @@ public class BillListAdapter extends BaseAdapter{
 
     }
 
+    public List<PaymentBean> getItemList() {
+        return itemList;
+    }
+
+    public void setItemList(List<PaymentBean> itemList) {
+        this.itemList = itemList;
+    }
 
     @Override
     public int getCount() {
@@ -70,4 +77,5 @@ public class BillListAdapter extends BaseAdapter{
 
         return convertView;
     }
+
 }

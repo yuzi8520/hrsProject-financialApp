@@ -8,9 +8,6 @@ import android.widget.Toast;
 import com.hrs.financial.MainActivity;
 import com.hrs.financial.payment.DetailActivity;
 import com.hrs.financial.util.ApplicationContextParams;
-import com.hrs.financial.util.bean.ResultBean;
-
-import org.apache.commons.lang.math.NumberUtils;
 
 public class LoginHandler extends Handler{
 	
@@ -23,13 +20,11 @@ public class LoginHandler extends Handler{
 	
 	
 	public void handleMessage(Message msg){
-		ResultBean result = (ResultBean) msg.obj;
+		LoginResult result = (LoginResult) msg.obj;
 		loginActivity.hiddenProgressDialog();
 		Toast.makeText(loginActivity.getApplicationContext(), result.getMsg(), Toast.LENGTH_SHORT).show();
 		if(result.isSuccess()) {
-			ApplicationContextParams.getUserBean()
-					.setId(NumberUtils.toInt(String.valueOf(result.getTag()),0));
-
+			ApplicationContextParams.setUserBean(result.getUser());
 			Intent intent = new Intent(loginActivity, DetailActivity.class);
 			loginActivity.startActivity(intent);
 		}

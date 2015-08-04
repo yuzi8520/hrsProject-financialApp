@@ -2,12 +2,15 @@ package com.hrs.financial.payment.bean;
 
 import com.hrs.financial.util.bean.ResultBean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by Administrator on 2015/7/26.
  */
 public class QueryResult  extends ResultBean {
+
+    public QueryResult(){}
 
     public QueryResult(boolean success,String msg){
        super(success,msg);
@@ -16,14 +19,20 @@ public class QueryResult  extends ResultBean {
 
     private int count;
 
-    private int curPage;
+    private int curPage = 1;
 
     private int pageSize;
 
 
+    public int getPageCount(){
+        if(count ==0 || pageSize == 0){
+            return 1;
+        }
+        return  (count+pageSize-1)/pageSize;
+    }
 
 
-    private List<PaymentBean> paymentList;
+    private List<PaymentBean> paymentList = new ArrayList<PaymentBean>();
 
     public int getCount() {
         return count;

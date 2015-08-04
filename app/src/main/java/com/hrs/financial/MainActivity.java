@@ -42,9 +42,9 @@ public class MainActivity extends Activity {
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
-			String userName = username.getText().toString().trim();
+			String userAccount = username.getText().toString().trim();
 			String password = pwd.getText().toString().trim();
-			if(StringUtils.isBlank(userName)){
+			if(StringUtils.isBlank(userAccount)){
 				Toast.makeText(MainActivity.this.getApplicationContext(),"请输入需登陆的账号!", Toast.LENGTH_SHORT).show();
 				WidgetUtil.requestFocus(username);
 				return;
@@ -55,7 +55,7 @@ public class MainActivity extends Activity {
 				return ;
 			}	
 			loginDialog = ProgressDialog.show(MainActivity.this, "请稍等片刻", "正在登陆中..");
-			UserBean userBean = new UserBean(userName,password);
+			UserBean userBean = new UserBean(userAccount,password);
 			new Thread(new LoginThread(userBean,loginHandler)).start();
 		}
 	}

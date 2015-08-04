@@ -32,19 +32,26 @@ public class HttpClientUtil {
 	 * @return
 	 */
 	public static  <T> T doPost(String url,Object requestObject,Class<T> resultClass){
-		return post(url,requestObject,resultClass);
+		return post(url,requestObject,resultClass,null);
 	}
 
 
+	public static  <T> T doPost(String url,Object requestObject,Class<T> resultClass,List<NameValuePair> others){
+		return post(url,requestObject,resultClass,others);
+	}
+
+	public static  <T> T doPost(String url,Object requestObject,TypeReference<T> typeReference,List<NameValuePair> others){
+		return post(url, requestObject, typeReference,others);
+	}
 
 	public static  <T> T doPost(String url,Object requestObject,TypeReference<T> typeReference){
-		return post(url, requestObject, typeReference);
+		return post(url, requestObject, typeReference,null);
 	}
 
 
 
 
-	private static  <T> T post(String url,Object requestObject,Object resultType){
+	private static  <T> T post(String url,Object requestObject,Object resultType,List<NameValuePair> others){
 		{
 			T result = null;
 			HttpClient httpClient = null;
@@ -54,7 +61,7 @@ public class HttpClientUtil {
 				HttpPost post = new HttpPost(url);
 
 				if(requestObject != null){
-					HttpEntity formEntity = createUrlEncodedFormEntity(requestObject);
+					HttpEntity formEntity = createUrlEncodedFormEntity(requestObject,others);
 					if(formEntity != null ){
 						post.setEntity(formEntity);
 					}
@@ -103,7 +110,7 @@ public class HttpClientUtil {
 		return result;
 	}
 	
-	private static HttpEntity createUrlEncodedFormEntity(Object requestObject) throws IOException,IllegalAccessException{
+	private static HttpEntity createUrlEncodedFormEntity(Object requestObject,List<NameValuePair> others) throws IOException,IllegalAccessException{
 		List<NameValuePair> params = new ArrayList<NameValuePair>();
 		if(requestObject instanceof Map){
 			Map<?,?> requestMap = (Map<?,?>)requestObject;
@@ -127,6 +134,9 @@ public class HttpClientUtil {
 					params.add(new BasicNameValuePair(name,String.valueOf(val)));
 				}
 			}
+		}
+		if(others != null && others.size() >0 ){
+			params.addAll(others);
 		}
 
 		UrlEncodedFormEntity formEntity = new UrlEncodedFormEntity(params,encoding);

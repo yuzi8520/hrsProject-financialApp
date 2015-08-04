@@ -5,8 +5,8 @@ public class UserBean {
 	
 	public UserBean (){}
 
-	public UserBean(String userName ,String password){
-		this.userName = userName ;
+	public UserBean(String userAccount ,String password){
+		this.userAccount = userAccount ;
 		this.password = password;
 	}
 
@@ -14,6 +14,8 @@ public class UserBean {
 	private Integer id ;
 
 	private String userName;
+
+	private String userAccount;
 
 	private String password;
 
@@ -44,9 +46,15 @@ public class UserBean {
 	}
 	
 	public String toString(){
-		return "userName="+userName+",password="+password;
+		return "userAccount="+userAccount+",password="+password;
 		
 	}
-	
 
+	public String getUserAccount() {
+		return userAccount;
+	}
+
+	public void setUserAccount(String userAccount) {
+		this.userAccount = userAccount;
+	}
 }

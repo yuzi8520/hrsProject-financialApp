@@ -11,4 +11,14 @@
 
     <string name="page_pre">上一页</string>
     <string name="page_next">下一页</string>
+    <string name="title_activity_bill_add">新增账单</string>
+
+    <string name="bill_title">标题：</string>
+    <string name="bill_date">时间：</string>
+    <string name="bill_money">金额：</string>
+    <string name="bill_comment">付款备注：</string>
+    <string name="bill_type">类型：</string>
+
+    <string name="save_bt">保存</string>
+    <string name="back_bt">返回</string>
 </resources>

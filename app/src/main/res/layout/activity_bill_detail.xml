@@ -9,27 +9,25 @@
     android:orientation="vertical"
     tools:context="com.hrs.financial.payment.DetailActivity">
 
-    <ListView
-        android:id="@+id/payment_list_view"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
-    </ListView>
+        <ListView
+            android:id="@+id/payment_list_view"
+            android:layout_width="fill_parent"
+            android:layout_weight="1"
+            android:layout_height="fill_parent">
+        </ListView>
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        android:layout_weight="0"
         android:layout_gravity="right">
-
-
         <Button
             android:id="@+id/page_pre"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/page_pre"
-            android:layout_weight="1"
-
-            />
+            android:layout_weight="1" />
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -37,10 +35,10 @@
             android:layout_weight="1"
             android:id="@+id/page_nex"
             />
-
-
-
     </LinearLayout>
+
+
+
 
 
 </LinearLayout>

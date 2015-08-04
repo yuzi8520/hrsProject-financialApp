@@ -7,7 +7,7 @@ public class ResultBean {
 
 	private boolean success;
 	private String msg;
-	private Object tag;
+
 
 	public ResultBean(){
 
@@ -31,11 +31,5 @@ public class ResultBean {
 		this.msg = msg;
 	}
 
-	public Object getTag() {
-		return tag;
-	}
 
-	public void setTag(Object tag) {
-		this.tag = tag;
-	}
 }
